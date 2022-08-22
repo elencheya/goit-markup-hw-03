@@ -1,17 +1,27 @@
 :root{
+
+    /*====BACKGROUND COLOR====*/
     --main-background-color: #FFFFFF;
     --team-background-color: #F5F4FA;
     --hero-background-color: #2F303A;
     --footer-background-color: #2F303A;
+
+    /*===TEXT COLOR===*/
     --main-text-color: #757575;
     --h-bold-text-color: #212121;
     --logo-header-second-part-text-color: #000000;
     --logo-footer-second-part-text-color: #FFFFFF;
     --logo-first-part-text-color: #2196F3;
     --contacts-footer-text-color: rgba(255, 255, 255, 0.6);
+    
+    /*===DIFFERENT COLORS===*/
     --white-color: #FFFFFF;
     --focus-color: #2196F3;
     --buttons-background-color: #F5F4FA;
+
+    /*===BORDER COLOR==*/
+    --border-color-header:#ECECEC;
+    --border-color-portfolio:#EEEEEE;
 }
 
 body {
@@ -27,7 +37,6 @@ body {
 } 
 
 /* ====ПРИХОВАНИЙ ЗАГОЛОВОК=======*/
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -42,6 +51,21 @@ body {
     overflow: hidden;
 }
 
+/*=====ПРИБИРАЄМО ДЛЯ ВСІХ ВІДСТУПИ ЩОБ НЕ ПРОБИВАЛИ=====*/
+h1,
+h2,
+h3,
+p,
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*======ЗАДАЄМО КОНТЕЙНЕРУ ШИРИНУ====*/
+.container{
+    width: 1200px;
+}
 
 /* всім спискам забираємо крапочки*/
 .list {
@@ -54,7 +78,28 @@ body {
 }
 
 
+/*=====УТИЛІТНИЙ КЛАС ДЛЯ ВСІХ СЕКЦІЙ -ОДНАКОВІ ВІДСТУПИ====*/
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+
+.header-div{
+    display: flex;
+    align-items: center;
+    border-bottom:1px solid var(--border-color-header) ;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+}
+
 .header-logo{
+    margin-right: 50px;
+
     font-family:'Raleway',sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -67,6 +112,14 @@ body {
 
 .logo-first-part{
     color:var(--logo-first-part-text-color);
+}
+
+.header-list{
+    display:flex;
+}
+
+.header-item:not(:last-child){
+    margin-right: 50px;
 }
 
 
@@ -87,6 +140,14 @@ body {
     color: var(--focus-color);
 }
 
+.header-address-list{
+    display: flex;
+    margin-left: auto;
+}
+
+.header-address-item:not(:last-child){
+    margin-right: 50px;
+}
 
 .header-address-link{
     font-weight: 500;
@@ -102,17 +163,25 @@ body {
 }
 
 /*=======СЕКЦІЯ ГЕРОЙ======*/
-.hero{
+.hero.section{
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+
     background-color: var(--hero-background-color);
+    text-align: center;
 }
 
 .hero-title{
+    margin-bottom: 30px;
+    min-width: 696px;
+
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
         
     
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     
@@ -120,6 +189,11 @@ body {
 }
 
 .hero-btn{
+    display: inline-block;
+    min-width: 216px;
+    padding: 10px 32px;
+
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -130,11 +204,31 @@ body {
     
     color: var(--white-color);
     background-color: var(--focus-color);
+    border: transparent;
+    border-radius: 4px;
 
     cursor: pointer;
 }
 
+.speciality-list{
+    display: flex;
+    justify-content: center;
+}
+
+
+.speciality-item{
+    width: 270px;
+}
+
+.speciality-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+
 .speciality-subtitle{
+    margin-bottom: 8px;
+
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -150,8 +244,15 @@ body {
     letter-spacing: 0.03em;
 }
 
+.projects.section{
+    padding-top: 0px;
+}
+
 
 .projects-title{
+    margin-bottom: 50px;
+
+
     font-weight: 700;
     font-size: 36px;
     text-align: center;
@@ -159,6 +260,16 @@ body {
     
     color:var(--h-bold-text-color);
 }
+
+.projets-list{
+    display: flex;
+    justify-content: center;
+}
+
+.projets-item:not(:last-child){
+    margin-right: 30px;
+}
+
 
 .team{
     background-color: var(--team-background-color);
@@ -169,6 +280,9 @@ body {
 }
 
 .team-title{
+    margin-bottom: 50px;
+
+
     font-weight: 700;
     font-size: 36px;
     text-align: center;
@@ -176,7 +290,18 @@ body {
     color:var(--h-bold-text-color);
 }
 
+.team-list{
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+}
+
+
 .team-subtitle{
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+
     font-weight: 500;
     font-size: 16px;
     
@@ -187,6 +312,9 @@ body {
 }
 
 .team-description{
+    margin-bottom: 30px;
+
+
     font-size: 16px;
     
     
@@ -195,10 +323,16 @@ body {
 
 /*======СТИЛІЗАЦІЯ ФУТЕРА======*/
 .footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--footer-background-color);
 }
 
 .footer-logo{
+    margin-bottom: 20px;
+    display: flex;
+
+
     font-family: 'Raleway',sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -209,6 +343,10 @@ body {
     color: var(--logo-footer-second-part-text-color);
 }
 
+
+.footer-item:not(:last-child){
+    margin-bottom: 9px;
+}
 
 .footer-map-link{
     line-height: 1.71;
@@ -241,8 +379,20 @@ body {
 }
 
 /*=====ПОРТФОЛІО====*/
+.buttons{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
 
 .button{
+    display: inline-block;
+    min-width: 73px;
+    padding: 6px 22px;
+
+
+
     font-family:inherit;
     font-weight: 500;
     font-size: 16px;
@@ -254,9 +404,14 @@ body {
     color: var(--h-bold-text-color);
     background-color: var(--buttons-background-color);
     cursor: pointer;
+    border: transparent;
+    border-radius: 4px;
 }
-    
 
+.button-item:not(:last-child) {
+    margin-right: 8px;
+
+}
 
 .button:hover,
 .button:focus{
@@ -264,7 +419,28 @@ body {
     background-color:var(--focus-color);
 }
 
-.project-title{
+.portfolio-projects-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+}
+
+.border-portfolio{
+    padding: 20px 24px;
+
+
+    border-right: 1px solid var(--border-color-portfolio);
+    border-bottom: 1px solid var(--border-color-portfolio);
+    border-left: 1px solid var(--border-color-portfolio);
+}
+
+
+.portfolio-project-title{
+    margin-bottom: 4px;
+
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -275,7 +451,7 @@ body {
     color:var(--h-bold-text-color);
 }
 
-.projet-desc{
+.portfolio-projet-desc{
     font-size: 16px;
     line-height: 1.88;
     
