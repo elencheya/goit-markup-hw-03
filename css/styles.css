@@ -65,6 +65,9 @@ ul{
 /*======ЗАДАЄМО КОНТЕЙНЕРУ ШИРИНУ====*/
 .container{
     width: 1200px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    
 }
 
 /* всім спискам забираємо крапочки*/
@@ -84,12 +87,17 @@ ul{
     padding-bottom: 94px;
 }
 
+.header{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 0px;
+    padding-right: 0px;
 
-
+    border-bottom: 1px solid var(--border-color-header);
+}
 .header-div{
     display: flex;
     align-items: center;
-    border-bottom:1px solid var(--border-color-header) ;
 }
 
 .header-nav{
@@ -98,7 +106,7 @@ ul{
 }
 
 .header-logo{
-    margin-right: 50px;
+    margin-right: 93px;
 
     font-family:'Raleway',sans-serif;
     font-style: normal;
@@ -164,23 +172,27 @@ ul{
 
 /*=======СЕКЦІЯ ГЕРОЙ======*/
 .hero.section{
-    padding-top: 0px;
-    padding-bottom: 0px;
-
+    padding: 200px 0px;
+   
 
     background-color: var(--hero-background-color);
     text-align: center;
 }
 
 .hero-title{
+    margin-top: 0;
+    margin-right: auto;
     margin-bottom: 30px;
-    min-width: 696px;
+    margin-left: auto;
+
+
+    width: 696px;
 
 
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-        
+
     
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -212,7 +224,6 @@ ul{
 
 .speciality-list{
     display: flex;
-    justify-content: center;
 }
 
 
@@ -245,7 +256,8 @@ ul{
 }
 
 .projects.section{
-    padding-top: 0px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 
@@ -279,6 +291,7 @@ ul{
     background-color:var(--white-color);
 }
 
+
 .team-title{
     margin-bottom: 50px;
 
@@ -290,17 +303,21 @@ ul{
     color:var(--h-bold-text-color);
 }
 
+.team-div {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
 .team-list{
+    
     display: flex;
     column-gap: 30px;
-    justify-content: center;
 }
 
 
 .team-subtitle{
-    margin-top: 30px;
     margin-bottom: 10px;
-
 
     font-weight: 500;
     font-size: 16px;
@@ -312,9 +329,6 @@ ul{
 }
 
 .team-description{
-    margin-bottom: 30px;
-
-
     font-size: 16px;
     
     
@@ -330,7 +344,7 @@ ul{
 
 .footer-logo{
     margin-bottom: 20px;
-    display: flex;
+    display: block;
 
 
     font-family: 'Raleway',sans-serif;
@@ -423,8 +437,6 @@ ul{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: center;
-
 }
 
 .border-portfolio{
@@ -454,6 +466,5 @@ ul{
 .portfolio-projet-desc{
     font-size: 16px;
     line-height: 1.88;
-    
 }
 
